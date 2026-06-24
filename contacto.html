@@ -1944,7 +1944,8 @@ body.custom-background { background-color: #ffffff; }
   border-left-color: #e6e6e6;
   cursor: default;
 }
-</style><script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script><style type="text/css">@font-face { font-family: 'simple-line-icons'; src: url('chrome-extension://mihdfbecejheednfigjpdacgeilhlmnf/assets/fonts/Simple-Line-Icons.ttf') format('truetype'); }</style></head>
+</style><script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script><style type="text/css">@font-face { font-family: 'simple-line-icons'; src: url('chrome-extension://mihdfbecejheednfigjpdacgeilhlmnf/assets/fonts/Simple-Line-Icons.ttf') format('truetype'); }</style>    <link rel="stylesheet" href="apc-theme.css">
+</head>
 <body class="wp-singular page-template page-template-page-elementor page-template-page-elementor-php page page-id-341 custom-background wp-custom-logo wp-theme-rehomes opal-style chrome platform-windows opal-layout-wide opal-page-title-right-left opal-footer-skin-light opal-header-absolute elementor-default elementor-kit-7 elementor-page elementor-page-341 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit" data-elementor-device-mode="desktop">
 <div id="wptime-plugin-preloader"></div>
 <div class="opal-wrapper">
@@ -2083,18 +2084,61 @@ body.custom-background { background-color: #ffffff; }
 		</div>
 				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-241fdf9 animated-fast animated opal-move-up" data-id="241fdf9" data-element_type="column" data-e-type="column" data-settings="{&quot;animation&quot;:&quot;opal-move-up&quot;}">
 			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-79d5432 elementor-position-left animated-fast elementor-widget__width-initial elementor-vertical-align-top elementor-widget elementor-widget-image-box animated opal-move-up" data-id="79d5432" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;opal-move-up&quot;}" data-widget_type="image-box.default">
-					<div class="elementor-image-box-wrapper elementor-button-"><div class="elementor-image-framed"><figure class="elementor-image-box-img"></figure></div><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Ing. Manuel Humberto García Rosas</h3><p class="elementor-image-box-description">Director de la empresa<br>
-Telefono:  33 1410 5303<br>
-Correo: m.garcia@apcedificacion.com</p></div></div>				</div>
-				<div class="elementor-element elementor-element-c835652 elementor-position-left animated-fast elementor-widget__width-initial elementor-vertical-align-top elementor-widget elementor-widget-image-box animated opal-move-up" data-id="c835652" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;opal-move-up&quot;}" data-widget_type="image-box.default">
-					<div class="elementor-image-box-wrapper elementor-button-"><div class="elementor-image-framed"><figure class="elementor-image-box-img"></figure></div><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Equipo de Oficina APC</h3><p class="elementor-image-box-description">Control Documental y Presupuestalr<br>
-Telefono: 33 3611 0221<br>
-Correo:  controlpresupuestal@apcedificacion.com</p></div></div>				</div>
-				<div class="elementor-element elementor-element-d700a0c elementor-position-left animated-fast elementor-vertical-align-top elementor-widget elementor-widget-image-box animated opal-move-up" data-id="d700a0c" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;opal-move-up&quot;}" data-widget_type="image-box.default">
-					<div class="elementor-image-box-wrapper elementor-button-"><div class="elementor-image-framed"><figure class="elementor-image-box-img"></figure></div><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Atención y Nuevos Proyectos</h3><p class="elementor-image-box-description">Contacto General / Cotizaciones<br>
-Telefono: 33 3611 0221<br>
-Contacto: contacto@apcedificacion.com</p></div></div>				</div>
+						<style>
+.apc-contacts{--apc-green:#2e9e5b;--apc-green-d:#247a47;display:flex;flex-direction:column;gap:16px}
+.apc-contacts__eyebrow{color:var(--apc-green);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:13px;margin:0 0 6px}
+.apc-contacts__lead{font-size:15px;line-height:1.6;color:#475569;margin:0 0 6px;max-width:46ch}
+.apc-card{display:flex;gap:16px;padding:20px;background:#fff;border:1px solid #e7ebf0;border-radius:14px;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.apc-card:hover{border-color:var(--apc-green);box-shadow:0 12px 30px -14px rgba(46,158,91,.45);transform:translateY(-2px)}
+.apc-card__icon{flex:0 0 48px;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:rgba(46,158,91,.1);color:var(--apc-green)}
+.apc-card__icon svg{width:24px;height:24px}
+.apc-card__body{min-width:0}
+.apc-card__title{font-size:17px;font-weight:700;color:#0f172a;margin:0 0 2px;line-height:1.3}
+.apc-card__role{font-size:13px;color:#64748b;margin:0 0 12px}
+.apc-card__row{display:flex;align-items:center;gap:8px;font-size:14px;color:#334155;text-decoration:none;padding:3px 0;transition:color .2s ease}
+.apc-card__row svg{width:16px;height:16px;color:#94a3b8;flex:0 0 16px;transition:color .2s ease}
+.apc-card__row:hover{color:var(--apc-green-d)}
+.apc-card__row:hover svg{color:var(--apc-green)}
+.apc-card__row span{overflow-wrap:anywhere}
+@media (max-width:480px){.apc-card{padding:16px}}
+@media (prefers-reduced-motion:reduce){.apc-card,.apc-card__row,.apc-card__row svg{transition:none}.apc-card:hover{transform:none}}
+</style>
+    <div class="apc-contacts">
+      <div>
+        <p class="apc-contacts__eyebrow">Contáctanos directamente</p>
+        <p class="apc-contacts__lead">Escríbele al área correcta y recibe una respuesta más rápida.</p>
+      </div>
+
+      <div class="apc-card">
+        <div class="apc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></div>
+        <div class="apc-card__body">
+          <h3 class="apc-card__title">Ing. Manuel Humberto García Rosas</h3>
+          <p class="apc-card__role">Director de la empresa</p>
+          <a class="apc-card__row" href="tel:+523314105303"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>33 1410 5303</span></a>
+          <a class="apc-card__row" href="mailto:m.garcia@apcedificacion.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>m.garcia@apcedificacion.com</span></a>
+        </div>
+      </div>
+
+      <div class="apc-card">
+        <div class="apc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></div>
+        <div class="apc-card__body">
+          <h3 class="apc-card__title">Equipo de Oficina APC</h3>
+          <p class="apc-card__role">Control Documental y Presupuestal</p>
+          <a class="apc-card__row" href="tel:+523336110221"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>33 3611 0221</span></a>
+          <a class="apc-card__row" href="mailto:controlpresupuestal@apcedificacion.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>controlpresupuestal@apcedificacion.com</span></a>
+        </div>
+      </div>
+
+      <div class="apc-card">
+        <div class="apc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></svg></div>
+        <div class="apc-card__body">
+          <h3 class="apc-card__title">Atención y Nuevos Proyectos</h3>
+          <p class="apc-card__role">Contacto General / Cotizaciones</p>
+          <a class="apc-card__row" href="tel:+523336110221"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>33 3611 0221</span></a>
+          <a class="apc-card__row" href="mailto:contacto@apcedificacion.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>contacto@apcedificacion.com</span></a>
+        </div>
+      </div>
+    </div>
 					</div>
 		</div>
 					</div>

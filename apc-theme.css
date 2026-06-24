@@ -1,0 +1,22 @@
+/* APC Edificación — tipografía global
+   Contenido: Be Vietnam Pro · Títulos: DM Serif Display */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+/* Controles de formulario no heredan la fuente por defecto */
+input, textarea, select, button, .elementor-button {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+/* Títulos en serif display */
+h1, h2, h3, h4, h5, h6,
+.elementor-heading-title,
+.elementor-image-box-title,
+.apc-card__title,
+.entry-title, .page-title, .widget-title {
+  font-family: 'DM Serif Display', Georgia, serif !important;
+  font-weight: 400 !important;
+}
