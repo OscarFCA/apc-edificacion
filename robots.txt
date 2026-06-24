@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oscarfca.github.io/apc-edificacion/sitemap.xml
