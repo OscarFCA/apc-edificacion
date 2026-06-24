@@ -11,6 +11,12 @@ input, textarea, select, button, .elementor-button {
   font-family: 'Be Vietnam Pro', sans-serif !important;
 }
 
+/* Anti-FOUC: el héroe/banner comparte la clase abcfe3f y lleva texto blanco.
+   Le damos un fondo oscuro de respaldo para que, mientras carga la imagen, el
+   área sea oscura (texto legible) en vez de un flash blanco al cambiar de página. */
+.elementor-element-abcfe3f { background-color: #20242e !important; }
+.elementor-cta__bg, .elementor-cta { background-color: #20242e; }
+
 /* Títulos en serif display */
 h1, h2, h3, h4, h5, h6,
 .elementor-heading-title,
