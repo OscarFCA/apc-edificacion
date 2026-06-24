@@ -1,33 +1,43 @@
 # APC Edificación
 
-Sitio estático de **APC Edificación** — gerencia y supervisión profesional de obra.
+Sitio web estático de **APC Edificación** — gerencia y supervisión profesional de obra.
+Hecho a mano en HTML, CSS y JavaScript (sin frameworks ni WordPress).
 
-Publicado con **GitHub Pages**: https://oscarfca.github.io/apc-edificacion/
+🌐 https://oscarfca.github.io/apc-edificacion/
 
-## Páginas
+## Estructura
 
-| Página | Archivo |
-|---|---|
-| Inicio | `index.html` |
-| Proyectos | `projects.html` |
-| PILA – Parque Industrial La Laja | `pila.html` |
-| Santarena | `santarena.html` |
-| Torre Creativo | `torre-creativo.html` |
-| Tres Parques | `tres-parques.html` |
-| Metodología (¿Por qué una gerencia profesional?) | `gerencia-profesional.html` |
-| Contacto | `contacto.html` |
+```
+index.html          Inicio
+metodologia.html    Nuestra Metodología (5 fases + equipo)
+proyectos.html      Portafolio
+  ├─ santarena.html
+  ├─ pila.html
+  ├─ tres-parques.html
+  └─ torre-creativo.html
+contacto.html       Contacto (formulario + datos + mapa)
+css/styles.css      Design system (DM Serif Display + Be Vietnam Pro, verde #2e9e5b)
+js/main.js          Nav móvil, header, reveal, lightbox de galería
+assets/             Logo y fotos del equipo
+build-site.mjs      Generador del sitio (header/footer compartidos + datos)
+```
 
-## Optimizaciones aplicadas
+## Imágenes
 
-- **Estructura limpia**: URLs y carpetas con slugs ASCII (sin espacios ni caracteres especiales) compatibles con GitHub Pages.
-- **Imágenes en WebP**: 73 imágenes convertidas/optimizadas (JPEG con compresión, PNG/logos en lossless, galerías descargadas de Cloudinary como WebP local). El sitio es autocontenido, sin dependencias externas de imágenes.
-- **SEO**: `<title>` y `meta description` por página, `canonical`, Open Graph y Twitter Cards, datos estructurados (Organization JSON-LD), `sitemap.xml` y `robots.txt`. Limpieza de metadatos sobrantes de WordPress.
-- **Fuentes de iconos** alojadas localmente (Font Awesome, opal-icon).
+Las fotografías de proyectos y galerías se sirven desde **Cloudinary**
+(`res.cloudinary.com/dhg0yzpsj`) con `f_auto,q_auto` — formato y calidad
+automáticos, entrega por CDN y responsive. El logo y las fotos del equipo
+son locales (`assets/`).
+
+## Editar contenido
+
+El contenido (textos, datos de proyectos, galerías) vive en `build-site.mjs`.
+Tras editarlo: `node build-site.mjs` regenera todos los `.html`.
+También puedes editar los `.html` directamente para cambios puntuales.
 
 ## Notas
 
-- El formulario de contacto y el mapa de Google requieren un backend/clave para funcionar en producción; en el sitio estático quedan como marcador.
+- El formulario de contacto usa [FormSubmit](https://formsubmit.co) → llega a `contacto@apcedificacion.com` (requiere confirmar el correo la primera vez).
+- El mapa es un embed de Google Maps (sin API key).
 
----
-
-*Generado a partir del export del sitio WordPress de apcedificacion.safepilot.io.*
+🤖 Generated with [Claude Code](https://claude.com/claude-code)

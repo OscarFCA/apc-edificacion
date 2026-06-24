@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://oscarfca.github.io/apc-edificacion/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://oscarfca.github.io/apc-edificacion/projects.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://oscarfca.github.io/apc-edificacion/pila.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://oscarfca.github.io/apc-edificacion/santarena.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://oscarfca.github.io/apc-edificacion/torre-creativo.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://oscarfca.github.io/apc-edificacion/tres-parques.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://oscarfca.github.io/apc-edificacion/gerencia-profesional.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://oscarfca.github.io/apc-edificacion/contacto.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/</loc><lastmod>2026-06-24</lastmod></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/proyectos.html</loc><lastmod>2026-06-24</lastmod></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/santarena.html</loc><lastmod>2026-06-24</lastmod></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/pila.html</loc><lastmod>2026-06-24</lastmod></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/tres-parques.html</loc><lastmod>2026-06-24</lastmod></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/torre-creativo.html</loc><lastmod>2026-06-24</lastmod></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/metodologia.html</loc><lastmod>2026-06-24</lastmod></url>
+  <url><loc>https://oscarfca.github.io/apc-edificacion/contacto.html</loc><lastmod>2026-06-24</lastmod></url>
 </urlset>
