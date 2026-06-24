@@ -77,14 +77,14 @@ ${slug === 'index' ? `<script type="application/ld+json">${JSON.stringify({
 const header = (active) => `
 <header class="header">
   <div class="container">
-    <a class="brand" href="index.html"><img src="assets/logo.webp" alt="APC Edificación" width="120" height="98"></a>
+    <a class="brand" href="index.html">
+      <img class="logo-light" src="assets/logo-header.webp" alt="APC Edificación" width="120" height="98">
+      <img class="logo-dark" src="assets/logo.webp" alt="APC Edificación" width="120" height="98">
+    </a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav">
       ${NAV.map(([h, t]) => `<a href="${h}"${h === active ? ' aria-current="page"' : ''}>${t}</a>`).join('\n      ')}
     </nav>
-    <div class="header-actions">
-      <a class="btn btn--primary" href="contacto.html">Cotizar proyecto</a>
-    </div>
   </div>
 </header>`;
 
