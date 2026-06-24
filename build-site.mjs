@@ -25,9 +25,8 @@ const I = {
   msg: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
   user: '<circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>',
   fb: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
-  ig: '<rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/>',
-  in: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
-  x: '<path d="M18 6 6 18M6 6l12 12"/>',
+  tw: '<path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>',
+  yt: '<path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>',
 };
 const svg = (p, cls = '') => `<svg ${cls ? `class="${cls}" ` : ''}viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 
@@ -97,9 +96,8 @@ const footer = () => `
         <p>Gerencia de proyectos de construcción especializada en garantizar cumplimiento en tiempo, costo y calidad, mediante metodologías LEAN, PMI y BIM, procesos digitales y un acompañamiento cercano que brinda transparencia y certidumbre a cada cliente.</p>
         <div class="socials">
           <a href="#" aria-label="Facebook">${svg(I.fb)}</a>
-          <a href="#" aria-label="Instagram">${svg(I.ig)}</a>
-          <a href="#" aria-label="LinkedIn">${svg(I.in)}</a>
-          <a href="#" aria-label="X">${svg(I.x)}</a>
+          <a href="#" aria-label="Twitter">${svg(I.tw)}</a>
+          <a href="#" aria-label="YouTube">${svg(I.yt)}</a>
         </div>
       </div>
       <div class="footer__links">
@@ -130,7 +128,7 @@ const footer = () => `
 const PROJECTS = {
   santarena: {
     name: 'Santarena', short: 'Santarena', loc: 'Los Cabos, Baja California Sur', num: '01',
-    cover: 'copy_of_21_-_santarena_-_fachada_frontal_2_hig2kk_f3a539', banner: '20_-_Santarena_-_Roof_yyqqe9',
+    cover: 'copy_of_21_-_santarena_-_fachada_frontal_2_hig2kk_f3a539', homeCover: '20_-_Santarena_-_Roof_yyqqe9', banner: '20_-_Santarena_-_Roof_yyqqe9',
     desc: ['Santarena es un desarrollo residencial ubicado en Los Cabos, orientado a crear un proyecto de alto nivel y gran calidad constructiva. APC Edificación coordina el diseño, la gestoría y la ejecución del proyecto, asegurando que cada etapa se realice con precisión técnica y una planeación estratégica alineada a las expectativas del desarrollador.',
       'El proyecto incorpora metodologías LEAN, supervisión constante y una coordinación multidisciplinaria que garantiza eficiencia, control de costos y una ejecución limpia, incluso frente a retos técnicos complejos como la gestión del agua y las condiciones del terreno.'],
     specs: { Estado: 'En construcción', Localización: 'Los Cabos', Tipo: 'Desarrollo habitacional', Timeline: '18 meses', Cliente: 'Grupo MAG', Metodología: 'LEAN Construction' },
@@ -138,7 +136,7 @@ const PROJECTS = {
   },
   pila: {
     name: 'PILA – Parque Industrial La Laja', short: 'Parque Industrial PILA', loc: 'La Laja, Jalisco', num: '02',
-    cover: 'Firme_bodega_3_vkqxls', banner: 'dentro_nave_3_kmpqww',
+    cover: 'Firme_bodega_3_vkqxls', homeCover: 'dentro_nave_3_kmpqww', banner: 'dentro_nave_3_kmpqww',
     desc: ['Parque Industrial La Laja (PILA) es un desarrollo industrial estratégico en Jalisco, actualmente en ejecución y previsto para tres años de obra. APC Edificación lidera la planeación, supervisión y coordinación de especialidades para garantizar control total sobre tiempos, costos y calidad, manteniendo la operación del parque activa durante la construcción.',
       'El proyecto integra metodologías LEAN y herramientas digitales para asegurar decisiones oportunas, reducir riesgos y maximizar el retorno para desarrolladores e inversionistas.'],
     specs: { Estado: 'En construcción', Localización: 'La Laja, Jalisco', Tipo: 'Parque industrial', Timeline: '3 años', Cliente: 'OCAP Proyectos', Metodología: 'LEAN Construction' },
@@ -146,7 +144,7 @@ const PROJECTS = {
   },
   'tres-parques': {
     name: 'Tres Parques', short: 'Tres Parques', loc: 'Guadalajara, Jalisco — Colonia Country', num: '03',
-    cover: 'copy_of_lobby_shxb4z_5a25da', banner: 'Fachada_i6oaxw',
+    cover: 'copy_of_lobby_shxb4z_5a25da', homeCover: 'Fachada_i6oaxw', banner: 'Fachada_i6oaxw',
     desc: ['Tres Parques es un desarrollo residencial vertical ubicado en la Colonia Country de Guadalajara, diseñado para inversionistas que buscan proyectos con alto potencial de plusvalía y ejecución controlada. APC Edificación lidera la gestión desde la etapa de diseño y gestión de licencias, asegurando claridad técnica, cumplimiento normativo y tomas de decisión informadas.',
       'El proyecto integra metodologías LEAN, coordinación interdisciplinaria y supervisión estratégica para garantizar una construcción eficiente, minimizar desviaciones y entregar unidades con los más altos estándares de calidad.'],
     specs: { Estado: 'Diseño y licencias', Localización: 'Guadalajara, Jalisco', Tipo: 'Desarrollo residencial', Timeline: '18 meses', Cliente: 'Grupo MAG', Metodología: 'LEAN Construction' },
@@ -154,7 +152,7 @@ const PROJECTS = {
   },
   'torre-creativo': {
     name: 'Torre Creativo', short: 'Torre Creativo', loc: 'En proceso de selección', num: '04',
-    cover: 'copy_of_creativo_-_depa_a_2_v8jesz_91b66d', banner: 'Fachada_frente_tjeoqn',
+    cover: 'copy_of_creativo_-_depa_a_2_v8jesz_91b66d', homeCover: 'Fahada_esquina_mu6lmp', banner: 'Fachada_frente_tjeoqn',
     desc: ['Torre Creativo es un desarrollo residencial vertical impulsado por Grupo MAG, concebido para ofrecer un proyecto de alta calidad arquitectónica y constructiva. APC Edificación participa desde las primeras etapas para coordinar diseño, gestoría y planificación, garantizando claridad técnica y una base sólida para la futura ejecución del edificio.',
       'Aunque el proyecto se encuentra temporalmente detenido, se ha desarrollado una estrategia integral apoyada en metodologías LEAN, coordinación interdisciplinaria y procesos de control que permiten reactivar la obra con eficiencia, minimizar riesgos y asegurar el cumplimiento de estándares de calidad y exclusividad.'],
     specs: { Estado: 'Detenido temporalmente', Localización: 'En proceso de selección', Tipo: 'Desarrollo residencial', Timeline: '18 meses', Cliente: 'Grupo MAG', Metodología: 'LEAN Construction' },
@@ -164,10 +162,10 @@ const PROJECTS = {
 const PORDER = ['santarena', 'pila', 'tres-parques', 'torre-creativo'];
 const specIcon = { Estado: I.clip, Localización: I.pin, Tipo: I.building, Timeline: I.clock, Cliente: I.user, Metodología: I.layers };
 
-const projectCard = (slug) => {
+const projectCard = (slug, home) => {
   const p = PROJECTS[slug];
   return `<a class="pcard reveal" href="${slug}.html">
-    <img src="${cld(p.cover, 900, 650)}" alt="${p.short}" loading="lazy">
+    <img src="${cld(home ? (p.homeCover || p.cover) : p.cover, 900, 650)}" alt="${p.short}" loading="lazy">
     <span class="pcard__num">${p.num}</span>
     <div class="pcard__body">
       <h3>${p.short}</h3>
@@ -191,23 +189,25 @@ const ctaBand = () => `
 const pages = {};
 
 // ---- HOME ----
+// Features: ilustraciones del sitio original (mismas imágenes)
 const features = [
-  [I.shield, 'Cumplimiento garantizado', 'Planificamos cada obra con metodologías probadas como PMI, Lean Construction y BIM, asegurando el control de tiempos y costos. Cada avance se valida y documenta con rigor técnico.'],
-  [I.chart, 'Transparencia total', 'Cada cliente cuenta con reportes digitales y tableros de control en línea para dar seguimiento al presupuesto, avances y estimaciones en tiempo real. Información clara y sin sorpresas.'],
-  [I.award, 'Calidad y responsabilidad', 'Supervisamos cada fase del proyecto bajo estrictos estándares de calidad y seguridad, con el respaldo de nuestro equipo técnico y proveedores certificados.'],
+  ['assets/features/development_1.webp', 'Cumplimiento garantizado', 'Planificamos cada obra con metodologías probadas como PMI, Lean Construction y BIM, asegurando el control de tiempos y costos. Cada avance se valida y documenta con rigor técnico.'],
+  ['assets/features/development_2.webp', 'Transparencia total', 'Cada cliente cuenta con reportes digitales y tableros de control en línea para dar seguimiento al presupuesto, avances y estimaciones en tiempo real. Información clara y sin sorpresas.'],
+  ['assets/features/investor.webp', 'Calidad y responsabilidad', 'Supervisamos cada fase del proyecto bajo estrictos estándares de calidad y seguridad, con el respaldo de nuestro equipo técnico y proveedores certificados.'],
 ];
+// Servicios: como el original, sin iconos (cajas con borde). Títulos exactos.
 const services = [
-  [I.clip, 'Planeación Estratégica', 'Definimos alcances, tiempos, costos y riesgos desde el inicio. Cada proyecto arranca con una ruta clara orientada a una ejecución eficiente y controlada.'],
-  [I.chart, 'Control Presupuestal', 'Damos seguimiento continuo a estimaciones, contratos y pagos, manteniendo el presupuesto dentro de los límites aprobados y alineado al avance real.'],
-  [I.hat, 'Supervisión en Obra', 'Supervisión técnica diaria en sitio, seguimiento de avances y gestión de contratistas para que todo se construya como fue diseñado.'],
-  [I.file, 'Reportes Digitales', 'Reportes ejecutivos, programas de obra y documentación actualizada en una plataforma digital exclusiva, con visibilidad total en todo momento.'],
-  [I.layers, 'Metodologías LEAN · PMI · BIM', 'Integramos las mejores prácticas de la industria para cruzar especialidades, anticipar problemas y optimizar cada decisión del proyecto.'],
-  [I.msg, 'Comunicación Cercana', 'Un acompañamiento profesional, transparente y constante que mantiene a cada cliente informado y con certidumbre en cada etapa.'],
+  ['Planeación Estratégica', 'Definimos alcances, tiempos, costos y riesgos desde el inicio. Cada proyecto arranca con una ruta clara orientada a una ejecución eficiente y controlada.'],
+  ['Reportes Digitales', 'Reportes ejecutivos, programas de obra y documentación actualizada en una plataforma digital exclusiva, con visibilidad total en todo momento.'],
+  ['Control Presupuestal', 'Damos seguimiento continuo a estimaciones, contratos y pagos, manteniendo el presupuesto dentro de los límites aprobados y alineado al avance real.'],
+  ['Metodologías de Gestión', 'Integramos LEAN, PMI y BIM para cruzar especialidades, anticipar problemas y optimizar cada decisión del proyecto.'],
+  ['Supervisión de Obra', 'Supervisión técnica diaria en sitio, seguimiento de avances y gestión de contratistas para que todo se construya como fue diseñado.'],
+  ['Comunicación Transparente', 'Un acompañamiento profesional, transparente y constante que mantiene a cada cliente informado y con certidumbre en cada etapa.'],
 ];
 pages.index = `
 ${header('index.html')}
 <section class="hero">
-  <img class="hero__bg" src="${cld('20_-_Santarena_-_Roof_yyqqe9', 1920, 1080)}" alt="" fetchpriority="high">
+  <img class="hero__bg" src="${cld('6_-_Santarena_-_Terraza_techada_x1q4db_022cd9', 1920, 1080)}" alt="" fetchpriority="high">
   <div class="container">
     <div class="hero__inner">
       <span class="eyebrow">Gerencia de proyectos de construcción</span>
@@ -229,7 +229,7 @@ ${header('index.html')}
       <p class="lead">Somos una empresa especializada en la gerencia integral de proyectos de construcción. Desde hace más de veinte años trabajamos de la mano con desarrolladores, inversionistas y clientes particulares, involucrándonos en cada etapa para asegurar proyectos bien planeados, bien ejecutados y sin sorpresas.</p>
     </div>
     <div class="grid-3">
-      ${features.map(([ic, t, d]) => `<div class="feature reveal"><div class="feature__icon">${svg(ic)}</div><h3>${t}</h3><p>${d}</p></div>`).join('\n      ')}
+      ${features.map(([img, t, d]) => `<div class="feature reveal"><div class="feature__img"><img src="${img}" alt="" loading="lazy"></div><h3>${t}</h3><p>${d}</p></div>`).join('\n      ')}
     </div>
   </div>
 </section>
@@ -241,20 +241,21 @@ ${header('index.html')}
       <h2 class="section-title">Entregados en tiempo, dentro del presupuesto y con calidad.</h2>
     </div>
     <div class="grid-projects">
-      ${PORDER.map(projectCard).join('\n      ')}
+      ${PORDER.map(s=>projectCard(s,true)).join('\n      ')}
     </div>
     <div style="text-align:center;margin-top:48px"><a class="btn btn--dark" href="proyectos.html">Ver todos los proyectos ${svg(I.arrow)}</a></div>
   </div>
 </section>
 
-<section class="section section--dark">
+<section class="section section--dark services-section">
+  <img class="services-section__bg" src="${cld('Estructura_nave_2_l4a4vq', 1600, 900)}" alt="" loading="lazy">
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow">Coordinamos. Supervisamos. Cumplimos.</span>
-      <h2 class="section-title">Nos encargamos de cada etapa del proyecto</h2>
+      <h2 class="section-title">Nos encargamos de planear, coordinar y supervisar cada etapa del proyecto</h2>
     </div>
     <div class="grid-services">
-      ${services.map(([ic, t, d]) => `<div class="service"><div class="service__icon">${svg(ic)}</div><h3>${t}</h3><p>${d}</p></div>`).join('\n      ')}
+      ${services.map(([t, d]) => `<div class="service"><h3>${t}</h3><p>${d}</p></div>`).join('\n      ')}
     </div>
   </div>
 </section>
