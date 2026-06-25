@@ -7,6 +7,9 @@ const BASE = 'https://oscarfca.github.io/apc-edificacion/';
 const cld = (id, w, h, crop = 'fill') =>
   `https://res.cloudinary.com/dhg0yzpsj/image/upload/f_auto,q_auto,c_${crop},w_${w}${h ? `,h_${h}` : ''}/${id}`;
 
+// Imagen única del hero/banner en todo el sitio (homologada al Home)
+const HERO_IMG = '6_-_Santarena_-_Terraza_techada_x1q4db_022cd9';
+
 // ---- iconos (Lucide, stroke currentColor) ----
 const I = {
   shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>',
@@ -202,7 +205,7 @@ const ctaBand = () => `
       <h2>¿Quieres impulsar tu proyecto con nosotros?</h2>
     </div>
     <form class="ctaform__form" action="https://formsubmit.co/contacto@apcedificacion.com" method="POST">
-      <input type="hidden" name="_subject" value="Solicitud de llamada — apcedificacion.com">
+      <input type="hidden" name="_subject" value="Nuevo proyecto — apcedificacion.com">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input class="ctaform__field" type="text" name="nombre" placeholder="Nombre completo" required aria-label="Nombre completo">
@@ -214,7 +217,7 @@ const ctaBand = () => `
         <option>Gerencia y supervisión de obra</option>
         <option>Consulta general</option>
       </select>
-      <button class="ctaform__btn" type="submit">${svg(I.phone)}<span>Solicitar llamada</span></button>
+      <button class="ctaform__btn" type="submit">${svg(I.arrow)}<span>Impulsar mi proyecto</span></button>
     </form>
   </div>
 </section>`;
@@ -241,7 +244,7 @@ const services = [
 pages.index = `
 ${header('index.html')}
 <section class="hero">
-  <img class="hero__bg" src="${cld('6_-_Santarena_-_Terraza_techada_x1q4db_022cd9', 1920, 1080)}" alt="" fetchpriority="high">
+  <img class="hero__bg" src="${cld(HERO_IMG, 1920, 1080)}" alt="" fetchpriority="high">
   <div class="container">
     <div class="hero__inner">
       <span class="eyebrow">Gerencia de proyectos de construcción</span>
@@ -301,7 +304,7 @@ ${footer()}`;
 pages.proyectos = `
 ${header('proyectos.html')}
 <section class="banner">
-  <img class="banner__bg" src="${cld('Firme_bodega_3_vkqxls', 1920, 700)}" alt="">
+  <img class="banner__bg" src="${cld(HERO_IMG, 1920, 700)}" alt="">
   <div class="container"><h1>Proyectos</h1><div class="crumbs"><a href="index.html">Inicio</a> — Proyectos</div></div>
 </section>
 <section class="section">
@@ -325,7 +328,7 @@ for (const slug of PORDER) {
   pages[slug] = `
 ${header('proyectos.html')}
 <section class="banner">
-  <img class="banner__bg" src="${cld(p.banner, 1920, 700)}" alt="">
+  <img class="banner__bg" src="${cld(HERO_IMG, 1920, 700)}" alt="">
   <div class="container"><h1>${p.name}</h1><div class="crumbs"><a href="index.html">Inicio</a> — <a href="proyectos.html">Proyectos</a> — ${p.short}</div></div>
 </section>
 
@@ -374,7 +377,7 @@ const team = [
 pages.metodologia = `
 ${header('metodologia.html')}
 <section class="banner">
-  <img class="banner__bg" src="${cld('fase3_zqxj8y', 1920, 700)}" alt="">
+  <img class="banner__bg" src="${cld(HERO_IMG, 1920, 700)}" alt="">
   <div class="container"><h1>¿Por qué tu obra necesita una gerencia profesional?</h1><div class="crumbs"><a href="index.html">Inicio</a> — Nuestra Metodología</div></div>
 </section>
 
@@ -414,7 +417,7 @@ const ccards = [
 pages.contacto = `
 ${header('contacto.html')}
 <section class="banner">
-  <img class="banner__bg" src="${cld('6_-_Santarena_-_Terraza_techada_x1q4db_022cd9', 1920, 700)}" alt="">
+  <img class="banner__bg" src="${cld(HERO_IMG, 1920, 700)}" alt="">
   <div class="container"><h1>Contacto</h1><div class="crumbs"><a href="index.html">Inicio</a> — Contacto</div></div>
 </section>
 
