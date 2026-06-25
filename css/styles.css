@@ -20,7 +20,7 @@
   --shadow-md: 0 10px 30px -12px rgba(20, 26, 36, .18);
   --shadow-lg: 0 24px 60px -20px rgba(20, 26, 36, .28);
   --maxw: 1200px;
-  --header-h: 84px;
+  --header-h: 100px;
   --serif: 'DM Serif Display', Georgia, serif;
   --sans: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -87,7 +87,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 .header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 /* logo: blanco sobre héroe transparente, navy al hacer scroll */
 .brand { display: block; position: relative; }
-.brand img { height: 70px; width: auto; display: block; }
+.brand img { height: 84px; width: auto; display: block; }
 .brand .logo-light { position: absolute; inset: 0; opacity: 1; transition: opacity .25s; }
 .brand .logo-dark { opacity: 0; transition: opacity .25s; }
 .header.scrolled .brand .logo-light { opacity: 0; }
@@ -202,7 +202,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 .grid-team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .member { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: box-shadow .2s, transform .2s; }
 .member:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
-.member img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.member img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
 .member__body { padding: 22px 24px; }
 .member__role { color: var(--green); font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
 .member h3 { font-size: 21px; }

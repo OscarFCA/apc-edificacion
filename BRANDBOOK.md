@@ -42,7 +42,7 @@ oscuros/transparentes; versión **navy** (`assets/logo.webp`) sobre fondo claro.
 
 - **Botón primario:** verde, blanco, `border-radius:999px`, padding `15px 28px`, MAYÚS + tracking, ícono de flecha.
 - **Cards:** `--radius:14px` + sombras `--shadow-sm/md/lg`.
-- **Header:** alto `84px` (`--header-h`); transparente con logo+nav blancos sobre el hero/banner; al hacer scroll pasa a `rgba(255,255,255,.97)` sticky con logo navy.
+- **Header:** alto `100px` (`--header-h`); transparente con logo+nav blancos sobre el hero/banner; al hacer scroll pasa a `rgba(255,255,255,.97)` sticky con logo navy.
 - **Botón flotante:** burbuja verde de teléfono, esquina inferior izquierda.
 
 ## 5. Layout y espaciado
