@@ -87,7 +87,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 .header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 /* logo: blanco sobre héroe transparente, navy al hacer scroll */
 .brand { display: block; position: relative; }
-.brand img { height: 56px; width: auto; display: block; }
+.brand img { height: 70px; width: auto; display: block; }
 .brand .logo-light { position: absolute; inset: 0; opacity: 1; transition: opacity .25s; }
 .brand .logo-dark { opacity: 0; transition: opacity .25s; }
 .header.scrolled .brand .logo-light { opacity: 0; }
@@ -155,8 +155,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
   color: var(--green); display: grid; place-items: center; margin-bottom: 20px;
 }
 .feature__icon svg { width: 28px; height: 28px; }
-.feature__img { margin-bottom: 18px; }
-.feature__img img { width: 84px; height: auto; }
+.feature__img { margin-bottom: 22px; }
+.feature__img img { width: 124px; height: auto; }
 .feature h3 { font-size: 22px; margin-bottom: 10px; }
 .feature p { color: var(--muted); font-size: 15px; }
 
@@ -235,7 +235,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 .lightbox svg { width: 22px; height: 22px; }
 
 /* CTA con formulario en línea (fondo blanco, sin imagen) -------------------- */
-.ctaform { background: #fff; padding: 72px 0; }
+.ctaform { background: var(--bg); padding: 88px 0; }
 .ctaform__inner { display: grid; grid-template-columns: minmax(260px, 1fr) 1.7fr; gap: 48px; align-items: center; }
 .ctaform__head h2 { font-size: clamp(26px, 3vw, 38px); color: var(--ink); margin-top: 6px; }
 .ctaform__form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 16px; }
