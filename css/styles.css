@@ -15,7 +15,7 @@
   --line: #e6eaf0;
   --bg: #ffffff;
   --bg-alt: #f6f8fa;
-  --radius: 14px;
+  --radius: 3px;
   --shadow-sm: 0 1px 3px rgba(20, 26, 36, .06), 0 1px 2px rgba(20, 26, 36, .04);
   --shadow-md: 0 10px 30px -12px rgba(20, 26, 36, .18);
   --shadow-lg: 0 24px 60px -20px rgba(20, 26, 36, .28);
@@ -65,7 +65,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--sans); font-weight: 600; font-size: 14px;
   letter-spacing: .04em; text-transform: uppercase;
-  padding: 15px 28px; border-radius: 999px; cursor: pointer; border: 2px solid transparent;
+  padding: 15px 28px; border-radius: 3px; cursor: pointer; border: 2px solid transparent;
   transition: background-color .2s, color .2s, border-color .2s, transform .2s;
 }
 .btn svg { width: 16px; height: 16px; }
@@ -113,7 +113,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 
 /* Hero --------------------------------------------------------------------- */
 .hero {
-  position: relative; min-height: 100vh; display: flex; align-items: center;
+  position: relative; min-height: 112vh; display: flex; align-items: center;
   color: #fff; background: var(--navy); padding-top: var(--header-h);
 }
 /* tira vertical de redes sociales en el borde izquierdo del hero */
@@ -158,7 +158,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 }
 .feature:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .feature__icon {
-  width: 54px; height: 54px; border-radius: 14px; background: var(--green-soft);
+  width: 54px; height: 54px; border-radius: 3px; background: var(--green-soft);
   color: var(--green); display: grid; place-items: center; margin-bottom: 20px;
 }
 .feature__icon svg { width: 28px; height: 28px; }
@@ -226,14 +226,14 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 
 /* Gallery ------------------------------------------------------------------ */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.gallery a { border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 3; cursor: pointer; }
+.gallery a { border-radius: 3px; overflow: hidden; aspect-ratio: 4 / 3; cursor: pointer; }
 .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
 .gallery a:hover img { transform: scale(1.07); }
 
 /* Lightbox ----------------------------------------------------------------- */
 .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(10, 14, 20, .94); display: none; align-items: center; justify-content: center; padding: 30px; }
 .lightbox.open { display: flex; }
-.lightbox img { max-width: 92vw; max-height: 86vh; border-radius: 8px; }
+.lightbox img { max-width: 92vw; max-height: 86vh; border-radius: 3px; }
 .lightbox__close, .lightbox__nav { position: absolute; background: rgba(255,255,255,.1); border: 0; color: #fff; cursor: pointer; border-radius: 999px; display: grid; place-items: center; transition: background .2s; }
 .lightbox__close { top: 24px; right: 24px; width: 46px; height: 46px; }
 .lightbox__nav { top: 50%; transform: translateY(-50%); width: 52px; height: 52px; font-size: 24px; }
@@ -248,7 +248,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15;
 .ctaform__form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 16px; }
 .ctaform__field {
   font-family: var(--sans); font-size: 15px; color: var(--ink); width: 100%;
-  padding: 18px 20px; border: 1px solid transparent; border-radius: 10px; background: #f1f3f5;
+  padding: 18px 20px; border: 1px solid transparent; border-radius: 3px; background: #f1f3f5;
   transition: border-color .2s, background .2s;
 }
 .ctaform__field::placeholder { color: #8b94a2; }
@@ -257,7 +257,7 @@ select.ctaform__field { appearance: none; background-image: url("data:image/svg+
 .ctaform__btn {
   grid-column: 3; grid-row: 1 / span 2; display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 10px; min-width: 180px;
-  background: var(--green); color: #fff; border: 0; border-radius: 10px; cursor: pointer;
+  background: var(--green); color: #fff; border: 0; border-radius: 3px; cursor: pointer;
   font-family: var(--sans); font-weight: 600; font-size: 14px; letter-spacing: .06em; text-transform: uppercase;
   padding: 20px 28px; transition: background .2s, transform .2s;
 }
@@ -270,7 +270,7 @@ select.ctaform__field { appearance: none; background-image: url("data:image/svg+
 .field label { display: block; font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 7px; }
 .field input, .field textarea {
   width: 100%; font-family: var(--sans); font-size: 15px; color: var(--ink);
-  padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-alt);
+  padding: 14px 16px; border: 1px solid var(--line); border-radius: 3px; background: var(--bg-alt);
   transition: border-color .2s, background .2s;
 }
 .field input:focus, .field textarea:focus { outline: 0; border-color: var(--green); background: #fff; }
@@ -278,7 +278,7 @@ select.ctaform__field { appearance: none; background-image: url("data:image/svg+
 .contact-cards { display: flex; flex-direction: column; gap: 16px; }
 .ccard { display: flex; gap: 16px; padding: 20px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .2s, box-shadow .2s, transform .2s; }
 .ccard:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-2px); }
-.ccard__icon { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 12px; background: var(--green-soft); color: var(--green); display: grid; place-items: center; }
+.ccard__icon { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 3px; background: var(--green-soft); color: var(--green); display: grid; place-items: center; }
 .ccard__icon svg { width: 24px; height: 24px; }
 .ccard h3 { font-size: 18px; margin-bottom: 2px; }
 .ccard .role { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
