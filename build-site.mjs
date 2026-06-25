@@ -195,12 +195,27 @@ const projectCard = (slug, home) => {
 };
 
 const ctaBand = () => `
-<section class="cta">
-  <img class="cta__bg" src="${cld('dentro_nave_3_kmpqww', 1600, 600)}" alt="" loading="lazy">
-  <div class="container">
-    <h2>¿Listo para impulsar tu proyecto con nosotros?</h2>
-    <p>Cuéntanos sobre tu obra y recibe el acompañamiento de un equipo que cumple en tiempo, costo y calidad.</p>
-    <a class="btn btn--primary" href="contacto.html">Iniciar consulta ${svg(I.arrow)}</a>
+<section class="ctaform">
+  <div class="container ctaform__inner">
+    <div class="ctaform__head">
+      <span class="eyebrow">Solicitar Información</span>
+      <h2>¿Quieres impulsar tu proyecto con nosotros?</h2>
+    </div>
+    <form class="ctaform__form" action="https://formsubmit.co/contacto@apcedificacion.com" method="POST">
+      <input type="hidden" name="_subject" value="Solicitud de llamada — apcedificacion.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input class="ctaform__field" type="text" name="nombre" placeholder="Nombre completo" required aria-label="Nombre completo">
+      <input class="ctaform__field" type="tel" name="telefono" placeholder="Teléfono" aria-label="Teléfono">
+      <input class="ctaform__field" type="email" name="email" placeholder="Correo electrónico" required aria-label="Correo electrónico">
+      <select class="ctaform__field" name="asunto" aria-label="Asunto" required>
+        <option value="" disabled selected>Asunto</option>
+        <option>Cotización de proyecto</option>
+        <option>Gerencia y supervisión de obra</option>
+        <option>Consulta general</option>
+      </select>
+      <button class="ctaform__btn" type="submit">${svg(I.phone)}<span>Solicitar llamada</span></button>
+    </form>
   </div>
 </section>`;
 
