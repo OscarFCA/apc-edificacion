@@ -27,6 +27,9 @@ const I = {
   fb: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
   tw: '<path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>',
   yt: '<path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>',
+  gp: '<path d="M8.5 11h7M12 7.5v7" transform="translate(7 0)"/><path d="M8.5 8a4 4 0 1 0 3.9 5"/><path d="M12.5 11.5H9"/>',
+  ig: '<rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>',
+  li: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
 };
 const svg = (p, cls = '') => `<svg ${cls ? `class="${cls}" ` : ''}viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 
@@ -89,34 +92,50 @@ const header = (active) => `
 
 const footer = () => `
 <footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <div class="logo-text">APC <b>Edificación</b></div>
-        <p>Gerencia de proyectos de construcción especializada en garantizar cumplimiento en tiempo, costo y calidad, mediante metodologías LEAN, PMI y BIM, procesos digitales y un acompañamiento cercano que brinda transparencia y certidumbre a cada cliente.</p>
-        <div class="socials">
-          <a href="#" aria-label="Facebook">${svg(I.fb)}</a>
-          <a href="#" aria-label="Twitter">${svg(I.tw)}</a>
-          <a href="#" aria-label="YouTube">${svg(I.yt)}</a>
+  <div class="footer__top">
+    <img class="footer__bg" src="assets/footer-bg.webp" alt="" loading="lazy">
+    <div class="container footer__top-inner">
+      <h2 class="footer__title">Contáctanos</h2>
+      <div class="footer__cinfo">
+        <div>
+          <span class="footer__label">Phone</span>
+          <a class="footer__big" href="tel:+523336110221">33 3611 0221</a>
+          <p class="footer__addr">Calle San Nicolás de Bari #677 B, Colonia Camino Real Zapopan, Jalisco México</p>
+        </div>
+        <div>
+          <span class="footer__label">Email</span>
+          <a class="footer__big" href="mailto:contacto@apcedificacion.com">contacto@apcedificacion.com</a>
+          <div class="socials">
+            <a href="#" aria-label="Facebook">${svg(I.fb)}</a>
+            <a href="#" aria-label="Twitter">${svg(I.tw)}</a>
+            <a href="#" aria-label="Google Plus">${svg(I.gp)}</a>
+            <a href="#" aria-label="Instagram">${svg(I.ig)}</a>
+            <a href="#" aria-label="LinkedIn">${svg(I.li)}</a>
+          </div>
         </div>
       </div>
-      <div class="footer__links">
-        <h4>Enlaces</h4>
-        ${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join('\n        ')}
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h4>Sobre nosotros</h4>
+        <p>Gerencia de proyectos de construcción especializada en garantizar cumplimiento en tiempo, costo y calidad, mediante metodologías LEAN, PMI y BIM, procesos digitales y un acompañamiento cercano que brinda transparencia y certidumbre a cada cliente.</p>
       </div>
-      <div class="footer__links">
+      <div class="footer__col footer__links">
         <h4>Información</h4>
         <a href="#">Aviso de Privacidad</a>
         <a href="#">Términos y Condiciones</a>
       </div>
-      <div class="footer__contact">
-        <h4>Contacto</h4>
-        <div class="row">${svg(I.pin)}<span>Calle San Nicolás de Bari #677 B, Col. Camino Real, Zapopan, Jalisco, México</span></div>
-        <div class="row">${svg(I.phone)}<a href="tel:+523336110221">33 3611 0221</a></div>
-        <div class="row">${svg(I.mail)}<a href="mailto:contacto@apcedificacion.com">contacto@apcedificacion.com</a></div>
+      <div class="footer__col footer__links">
+        <h4>Enlaces útiles</h4>
+        <a href="index.html">Home</a>
+        <a href="metodologia.html">Nuestra Metodología</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
       </div>
     </div>
-    <div class="footer__bottom">© <span data-year>2026</span> APC Edificación S.A. de C.V. — Todos los derechos reservados.</div>
+    <div class="footer__bottom">© <span data-year>2026</span> – APC Edificación. Todos los derechos reservados.</div>
   </div>
 </footer>
 <a class="fab" href="tel:+523314105303" aria-label="Llamar">${svg(I.phone)}</a>
