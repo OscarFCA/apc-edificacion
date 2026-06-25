@@ -245,14 +245,18 @@ pages.index = `
 ${header('index.html')}
 <section class="hero">
   <img class="hero__bg" src="${cld(HERO_IMG, 1920, 1080)}" alt="" fetchpriority="high">
+  <div class="hero__social">
+    <span class="hero__social-line"></span>
+    <a href="#" aria-label="Facebook">${svg(I.fb)}</a>
+    <a href="#" aria-label="Twitter">${svg(I.tw)}</a>
+    <a href="#" aria-label="YouTube">${svg(I.yt)}</a>
+  </div>
   <div class="container">
     <div class="hero__inner">
       <span class="eyebrow">Gerencia de proyectos de construcción</span>
       <h1>Evita sobrecostos, retrasos y estrés: nosotros lo hacemos realidad.</h1>
-      <p class="sub">Gerencia integral de obra con control real sobre tiempo, costo y calidad. Más de veinte años haciendo proyectos bien planeados, bien ejecutados y sin sorpresas.</p>
       <div class="hero__cta">
         <a class="btn btn--primary" href="contacto.html">Iniciar consulta ${svg(I.arrow)}</a>
-        <a class="hero__phone" href="tel:+523314105303"><span class="ic">${svg(I.phone)}</span><span><small>Llámanos ahora</small>+(52) 33 1410 5303</span></a>
       </div>
     </div>
   </div>
