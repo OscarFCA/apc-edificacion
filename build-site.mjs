@@ -127,8 +127,8 @@ const footer = () => `
       </div>
       <div class="footer__col footer__links">
         <h4>Información</h4>
-        <a href="#">Aviso de Privacidad</a>
-        <a href="#">Términos y Condiciones</a>
+        <a href="privacidad.html">Aviso de Privacidad</a>
+        <a href="terminos.html">Términos y Condiciones</a>
       </div>
       <div class="footer__col footer__links">
         <h4>Enlaces útiles</h4>
@@ -469,8 +469,91 @@ ${header('contacto.html')}
 </section>
 ${footer()}`;
 
+// ---- PÁGINAS LEGALES ----
+const legalPage = (active, title, crumb, bodyHtml) => `
+${header(active)}
+<section class="banner">
+  <img class="banner__bg" src="${cld(HERO_IMG, 1920, 700)}" alt="">
+  <div class="container"><h1>${title}</h1><div class="crumbs"><a href="index.html">Inicio</a> — ${crumb}</div></div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="prose">
+      ${bodyHtml}
+    </div>
+  </div>
+</section>
+${footer()}`;
+
+pages.privacidad = legalPage('', 'Aviso de Privacidad', 'Aviso de Privacidad', `
+<p class="updated">Última actualización: 28 de junio de 2026.</p>
+<p>En cumplimiento de la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>, su Reglamento y los Lineamientos del Aviso de Privacidad, <strong>APC Edificación S.A. de C.V.</strong> pone a su disposición el presente Aviso de Privacidad.</p>
+
+<h2>1. Responsable del tratamiento</h2>
+<p>APC Edificación S.A. de C.V. ("APC Edificación"), con domicilio en Calle San Nicolás de Bari #677 B, Colonia Camino Real, Zapopan, Jalisco, México, es responsable del tratamiento y protección de sus datos personales.</p>
+
+<h2>2. Datos personales que recabamos</h2>
+<p>Podemos recabar los siguientes datos cuando usted los proporciona a través de nuestros formularios de contacto o por otros medios: nombre, correo electrónico, número telefónico y la información que incluya en el campo de mensaje o asunto.</p>
+
+<h2>3. Finalidades del tratamiento</h2>
+<p>Sus datos personales serán utilizados para las siguientes finalidades primarias:</p>
+<ul>
+  <li>Atender sus solicitudes de información, contacto y cotización.</li>
+  <li>Dar seguimiento a su proyecto y a la relación comercial.</li>
+  <li>Brindarle el servicio de gerencia y supervisión de obra que solicite.</li>
+</ul>
+<p>De manera secundaria, y solo si usted no manifiesta su negativa, podremos utilizarlos para enviarle información sobre nuestros servicios. Puede oponerse a estas finalidades secundarias escribiendo a contacto@apcedificacion.com.</p>
+
+<h2>4. Transferencia de datos</h2>
+<p>No transferimos sus datos personales a terceros sin su consentimiento, salvo en los supuestos previstos por el artículo 37 de la LFPDPPP (p. ej., requerimientos de autoridad competente). Podemos apoyarnos en proveedores que actúan como encargados (p. ej., servicios de envío de correo) únicamente para cumplir las finalidades aquí descritas.</p>
+
+<h2>5. Derechos ARCO</h2>
+<p>Usted tiene derecho a <strong>Acceder</strong>, <strong>Rectificar</strong> y <strong>Cancelar</strong> sus datos personales, así como a <strong>Oponerse</strong> a su tratamiento (derechos ARCO), y a revocar el consentimiento otorgado. Para ejercerlos, envíe su solicitud a <strong>contacto@apcedificacion.com</strong> indicando su nombre, los datos sobre los que desea ejercer el derecho y la descripción clara de su petición.</p>
+
+<h2>6. Cookies y tecnologías de rastreo</h2>
+<p>Este sitio puede utilizar cookies y herramientas de analítica web para mejorar la experiencia de navegación y entender el uso del sitio. Usted puede deshabilitar las cookies desde la configuración de su navegador.</p>
+
+<h2>7. Cambios al aviso de privacidad</h2>
+<p>Nos reservamos el derecho de actualizar el presente Aviso de Privacidad. Cualquier modificación será publicada en esta misma página, indicando la fecha de la última actualización.</p>
+
+<h2>8. Contacto</h2>
+<p>Si tiene dudas sobre este Aviso de Privacidad o el tratamiento de sus datos, contáctenos en <strong>contacto@apcedificacion.com</strong>.</p>
+`);
+
+pages.terminos = legalPage('', 'Términos y Condiciones', 'Términos y Condiciones', `
+<p class="updated">Última actualización: 28 de junio de 2026.</p>
+<p>El presente documento establece los términos y condiciones de uso ("Términos") del sitio web de <strong>APC Edificación S.A. de C.V.</strong> ("APC Edificación"). Al acceder y utilizar este sitio, usted acepta estos Términos en su totalidad.</p>
+
+<h2>1. Uso del sitio</h2>
+<p>Este sitio tiene fines informativos sobre los servicios de gerencia y supervisión de proyectos de construcción de APC Edificación. Usted se compromete a utilizarlo de forma lícita y a no realizar actividades que puedan dañar, inhabilitar o sobrecargar el sitio.</p>
+
+<h2>2. Contenido e información</h2>
+<p>La información publicada en este sitio es de carácter general y no constituye una oferta vinculante ni asesoría profesional específica. Los alcances, tiempos y costos de cualquier proyecto se definen únicamente mediante propuesta o contrato formal entre las partes.</p>
+
+<h2>3. Propiedad intelectual</h2>
+<p>Los textos, logotipos, marcas, imágenes y demás contenidos de este sitio son propiedad de APC Edificación o de sus respectivos titulares y están protegidos por la legislación aplicable. Queda prohibida su reproducción total o parcial sin autorización previa por escrito.</p>
+
+<h2>4. Enlaces a terceros</h2>
+<p>Este sitio puede contener enlaces a sitios de terceros. APC Edificación no es responsable del contenido, las políticas ni las prácticas de dichos sitios.</p>
+
+<h2>5. Limitación de responsabilidad</h2>
+<p>APC Edificación procura mantener la información actualizada y disponible, pero no garantiza la ausencia de errores ni la disponibilidad ininterrumpida del sitio. En la medida permitida por la ley, APC Edificación no será responsable por daños derivados del uso o la imposibilidad de uso del sitio.</p>
+
+<h2>6. Datos personales</h2>
+<p>El tratamiento de los datos personales que usted proporcione a través del sitio se rige por nuestro <a href="privacidad.html">Aviso de Privacidad</a>.</p>
+
+<h2>7. Modificaciones</h2>
+<p>APC Edificación podrá modificar estos Términos en cualquier momento. Las modificaciones entrarán en vigor a partir de su publicación en esta página.</p>
+
+<h2>8. Legislación y jurisdicción aplicable</h2>
+<p>Estos Términos se rigen por las leyes de los Estados Unidos Mexicanos. Para cualquier controversia, las partes se someten a los tribunales competentes de Zapopan, Jalisco, renunciando a cualquier otro fuero.</p>
+
+<h2>9. Contacto</h2>
+<p>Para cualquier duda sobre estos Términos, contáctenos en <strong>contacto@apcedificacion.com</strong>.</p>
+`);
+
 // ---- escribir ----
-const slugToFile = { index: 'index', proyectos: 'proyectos', metodologia: 'metodologia', contacto: 'contacto', santarena: 'santarena', pila: 'pila', 'tres-parques': 'tres-parques', 'torre-creativo': 'torre-creativo' };
+const slugToFile = { index: 'index', proyectos: 'proyectos', metodologia: 'metodologia', contacto: 'contacto', santarena: 'santarena', pila: 'pila', 'tres-parques': 'tres-parques', 'torre-creativo': 'torre-creativo', privacidad: 'privacidad', terminos: 'terminos' };
 const titles = {
   index: ['APC Edificación | Gerencia y Supervisión Profesional de Obra', 'APC Edificación: gerencia integral de proyectos de construcción en México con control de tiempo, costo y calidad mediante LEAN, PMI y BIM.'],
   proyectos: ['Proyectos | APC Edificación', 'Portafolio de APC Edificación: PILA, Santarena, Torre Creativo y Tres Parques. Obras industriales, corporativas y residenciales.'],
@@ -480,6 +563,8 @@ const titles = {
   pila: ['PILA – Parque Industrial La Laja | APC Edificación', 'PILA – Parque Industrial La Laja: proyecto industrial en Jalisco gestionado por APC Edificación.'],
   'tres-parques': ['Tres Parques | APC Edificación', 'Tres Parques: desarrollo residencial vertical en Guadalajara gestionado por APC Edificación.'],
   'torre-creativo': ['Torre Creativo | APC Edificación', 'Torre Creativo: desarrollo residencial vertical de Grupo MAG gestionado por APC Edificación.'],
+  privacidad: ['Aviso de Privacidad | APC Edificación', 'Aviso de Privacidad de APC Edificación conforme a la LFPDPPP: datos que recabamos, finalidades y derechos ARCO.'],
+  terminos: ['Términos y Condiciones | APC Edificación', 'Términos y condiciones de uso del sitio web de APC Edificación.'],
 };
 for (const [slug, body] of Object.entries(pages)) {
   const [title, desc] = titles[slug];
