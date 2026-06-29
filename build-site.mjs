@@ -563,7 +563,7 @@ pages.terminos = legalPage('', 'Términos y Condiciones', 'Términos y Condicion
 const slugToFile = { index: 'index', proyectos: 'proyectos', metodologia: 'metodologia', contacto: 'contacto', santarena: 'santarena', pila: 'pila', 'tres-parques': 'tres-parques', 'torre-creativo': 'torre-creativo', privacidad: 'privacidad', terminos: 'terminos' };
 const titles = {
   index: ['APC Edificación | Gerencia y Supervisión Profesional de Obra', 'APC Edificación: gerencia integral de proyectos de construcción en México con control de tiempo, costo y calidad mediante LEAN, PMI y BIM.'],
-  proyectos: ['Proyectos | APC Edificación', 'Portafolio de APC Edificación: PILA, Santarena, Torre Creativo y Tres Parques. Obras industriales, corporativas y residenciales.'],
+  proyectos: ['Proyectos | APC Edificación', 'Portafolio de APC Edificación: PILA, Santarena y Torre Creativo. Obras industriales, corporativas y residenciales gestionadas de principio a fin.'],
   metodologia: ['¿Por qué una gerencia profesional? | APC Edificación', 'La metodología de APC Edificación: 5 fases que integran PMI, LEAN y BIM para darte control real sobre tiempo, costo y calidad.'],
   contacto: ['Contacto | APC Edificación', 'Contacta a APC Edificación para la gerencia y supervisión profesional de tu obra. Cotiza tu proyecto con nuestro equipo.'],
   santarena: ['Santarena | APC Edificación', 'Santarena: desarrollo residencial en Los Cabos gestionado por APC Edificación con metodología LEAN.'],
