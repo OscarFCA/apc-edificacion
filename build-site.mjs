@@ -165,6 +165,10 @@ const PROJECTS = {
     gallery: ['Firme_bodega_3_vkqxls', 'Dentro_nave_2_lyf024', 'Firme_bodega_4_y5byhx', 'dentro_nave_3_kmpqww', 'Dentro_nave_2_zgh1bl', 'Colado_bodega_umjojk', 'Terraceria_nave_d0i9ej', 'Estrcutura_nave_ppq9b9', 'Estructura_nave_2_l4a4vq', 'Vista_nave_2_utve3p', 'Estructura_nave_nrcat4', 'Naves_y_amenidades_pbd4hw_78362a72c', 'Toma_aerea_2_gdpmki_7837e0bc5', 'Toma_aerea_3_ly1o5e_783892785', 'Toma_aerea_uisjni_78390ec8e', 'Nave_3_y_4_1_lrncdy_78402d1dc', 'Nave_3_y_4_d6wod1_7841b6cd9', 'Naves_3_y_4_2_cmaf8z_784283e2c', 'Naves_a_b_y_c_drflgn_7843ab7e9'],
   },
   'tres-parques': {
+    // OCULTO temporalmente a petición del cliente (proyecto reservado, no se pueden
+    // publicar imágenes aún). Para REACTIVARLO: borra esta línea `hidden: true` y
+    // vuelve a correr `node build-site.mjs`.
+    hidden: true,
     name: 'Tres Parques', short: 'Tres Parques', loc: 'Guadalajara, Jalisco — Colonia Country', num: '03',
     cover: 'copy_of_lobby_shxb4z_5a25da', homeCover: 'Fachada_i6oaxw', banner: 'Fachada_i6oaxw',
     desc: ['Tres Parques es un desarrollo residencial vertical ubicado en la Colonia Country de Guadalajara, diseñado para inversionistas que buscan proyectos con alto potencial de plusvalía y ejecución controlada. APC Edificación lidera la gestión desde la etapa de diseño y gestión de licencias, asegurando claridad técnica, cumplimiento normativo y tomas de decisión informadas.',
@@ -182,13 +186,16 @@ const PROJECTS = {
   },
 };
 const PORDER = ['santarena', 'pila', 'tres-parques', 'torre-creativo'];
+// Solo proyectos visibles (excluye los marcados hidden). Reactivar = quitar hidden.
+const VISIBLE = PORDER.filter((s) => !PROJECTS[s].hidden);
 const specIcon = { Estado: I.clip, Localización: I.pin, Tipo: I.building, Timeline: I.clock, Cliente: I.user, Metodología: I.layers };
 
-const projectCard = (slug, home) => {
+const projectCard = (slug, home, idx) => {
   const p = PROJECTS[slug];
+  const num = String((idx ?? 0) + 1).padStart(2, '0');
   return `<a class="pcard reveal" href="${slug}.html">
     <img src="${cld(home ? (p.homeCover || p.cover) : p.cover, 900, 650)}" alt="${p.short}" loading="lazy">
-    <span class="pcard__num">${p.num}</span>
+    <span class="pcard__num">${num}</span>
     <div class="pcard__body">
       <h3>${p.short}</h3>
       <div class="loc">${svg(I.pin)}<span>${p.loc}</span></div>
@@ -282,7 +289,7 @@ ${header('index.html')}
       <h2 class="section-title">Entregados en tiempo, dentro del presupuesto y con calidad.</h2>
     </div>
     <div class="grid-projects">
-      ${PORDER.map(s=>projectCard(s,true)).join('\n      ')}
+      ${VISIBLE.map((s,i)=>projectCard(s,true,i)).join('\n      ')}
     </div>
     <div style="text-align:center;margin-top:48px"><a class="btn btn--dark" href="proyectos.html">Ver todos los proyectos ${svg(I.arrow)}</a></div>
   </div>
@@ -319,7 +326,7 @@ ${header('proyectos.html')}
       <p class="lead">Desarrollos industriales, corporativos y residenciales gestionados de principio a fin con control total sobre tiempo, costo y calidad.</p>
     </div>
     <div class="grid-projects">
-      ${PORDER.map(projectCard).join('\n      ')}
+      ${VISIBLE.map((s,i)=>projectCard(s,false,i)).join('\n      ')}
     </div>
   </div>
 </section>
@@ -327,7 +334,7 @@ ${ctaBand()}
 ${footer()}`;
 
 // ---- PÁGINAS DE PROYECTO ----
-for (const slug of PORDER) {
+for (const slug of VISIBLE) {
   const p = PROJECTS[slug];
   pages[slug] = `
 ${header('proyectos.html')}
